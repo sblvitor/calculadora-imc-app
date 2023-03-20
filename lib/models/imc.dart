@@ -1,9 +1,14 @@
+import 'package:flutter/cupertino.dart';
+
 class IMC {
+  final String _id = UniqueKey().toString();
   double _peso = 0;
   double _altura = 0;
   double _imc = 0;
 
   IMC(this._peso, this._altura);
+
+  String get id => _id;
 
   double get peso => _peso;
 
@@ -19,7 +24,7 @@ class IMC {
 
   double get imc => _imc;
 
-  void calculateIMC() {
-    _imc = _peso / (_altura * _altura);
+  set imc(double imc) {
+    _imc = imc;
   }
 }
