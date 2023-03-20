@@ -6,7 +6,7 @@ class IMC {
   double _altura = 0;
   double _imc = 0;
 
-  IMC(this._peso, this._altura);
+  IMC(this._peso, this._altura, this._imc);
 
   String get id => _id;
 
