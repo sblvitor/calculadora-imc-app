@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                     margin: const EdgeInsets.only(top: 70),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16.0),
-                      child: Image.network("https://www.plasticadosonho.com.br/wp-content/uploads/2017/12/blog-04-o-que-e-imc.jpg",
+                      child: Image.asset("lib/images/imc.png",
                         height: 225,
                       ),
                     ),
