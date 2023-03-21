@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
 
   void getIMCs() async {
     _imc = await imcRepository.getIMCs();
+    setState(() {});
   }
 
   double calcularImc(double peso, double altura) {
@@ -128,7 +129,8 @@ class _HomePageState extends State<HomePage> {
                           const SnackBar(content: Text("Por favor preencha os campos conforme os exemplos!")));
                       }
                       else {
-                        await imcRepository.addIMC(IMC(peso, altura, calcularImc(peso, altura)));
+                        await imcRepository.addIMC(IMC(0, peso, altura, calcularImc(peso, altura)));
+                        getIMCs();
                         Navigator.pop(context);
                       }
                       setState(() {});

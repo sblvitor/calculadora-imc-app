@@ -5,5 +5,5 @@ class IMC {
   double altura = 0;
   double imc = 0;
 
-  IMC(this.peso, this.altura, this.imc);
+  IMC(this.id, this.peso, this.altura, this.imc);
 }
