@@ -126,8 +126,9 @@ class _HomePageState extends State<HomePage> {
                       if(peso == null || altura == null) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text("Por favor preencha os campos conforme os exemplos!")));
-                      } else {
-                         await imcRepository.addIMC(IMC(peso, altura, calcularImc(peso, altura)));
+                      }
+                      else {
+                        await imcRepository.addIMC(IMC(peso, altura, calcularImc(peso, altura)));
                         Navigator.pop(context);
                       }
                       setState(() {});
